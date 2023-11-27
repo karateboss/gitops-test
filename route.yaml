@@ -1,0 +1,14 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: bgd
+  labels:
+    app: bgd
+    app.kubernetes.io/instance: bgd
+spec:
+  to:
+    kind: Service
+    name: bgd
+    weight: 100
+  port:
+    targetPort: 8080
