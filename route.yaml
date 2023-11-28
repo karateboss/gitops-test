@@ -12,3 +12,7 @@ spec:
     weight: 100
   port:
     targetPort: 8080
+    kind: Route
+  tls:
+    termination: edge
+  wildcardPolicy: None
